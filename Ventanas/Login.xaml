@@ -1,0 +1,36 @@
+﻿<Window x:Class="PlayaApp.Ventanas.Login"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PlayaApp.Ventanas"
+        mc:Ignorable="d"
+        Title="Login" Height="400" Width="400" WindowStartupLocation="CenterScreen" ResizeMode="NoResize" WindowStyle="None">
+    <Grid Background="#536377">
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" x:Name="InicioSesion" >
+            <Label HorizontalAlignment="Center" Foreground="#061B2E" FontSize="24" FontWeight="Bold">Iniciar Sesion</Label>
+            <ComboBox />
+            <StackPanel  HorizontalAlignment="Center" Margin="0 5 0 0">
+                <Button Style="{DynamicResource ButtonStyle1}"  Margin="0 0 0 5" Width="150" x:Name="btnIngresar" Click="btnIngresar_Click">Ingresar</Button>
+                <Button Style="{DynamicResource ButtonStyleTransparent}" x:Name="btnRegistro" Click="btnRegistro_Click">Registro</Button>
+            </StackPanel>
+        </StackPanel>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center" Visibility="Collapsed" x:Name="Registro">
+            <Label HorizontalAlignment="Center" Foreground="#061B2E" FontSize="24" FontWeight="Bold" Margin="0 0 0 10">Registro</Label>
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="20" Foreground="#061B2E" Width="130">Usuario:</Label>
+                <TextBox Width="200" FontSize="20" VerticalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="20" Foreground="#061B2E" Width="130">RUC:</Label>
+                <TextBox Width="200" FontSize="20" VerticalAlignment="Center" />
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <Label FontSize="20" Foreground="#061B2E" Width="130">Razon Social:</Label>
+                <TextBox Width="200" FontSize="20" VerticalAlignment="Center" />
+            </StackPanel>
+            <Button Style="{DynamicResource ButtonStyle1}"  Margin="0 5 0 5" Width="150" x:Name="btnRegistrar" Click="btnRegistrar_Click">Registrar</Button>
+            <Button Style="{DynamicResource ButtonStyleTransparent}" Width="150" x:Name="btnLogin" Click="btnLogin_Click">Volver</Button>
+        </StackPanel>
+    </Grid>
+</Window>
